@@ -424,3 +424,19 @@ const messages = [
     "VIDD VÉGIG AZ ÖTLETEIDET!",
     "VIGYÉL EGY JÓ HÍRT!",
 ];
+
+const massagebox = document.querySelector('#massagebox')
+const massageButton = document.querySelector('#massageButton')
+
+//console.log(massageButton,massagebox);
+massageButton.addEventListener('click',ujUzenet)
+
+
+function ujUzenet(){
+
+    //const r = Math.ceil(Math.random()*10) 
+    const r = Math.ceil(Math.random()*messages.length) 
+    console.log(r);
+    
+    massagebox.textContent = messages[r-1]
+}
